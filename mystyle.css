@@ -1,0 +1,245 @@
+Head {}
+
+body {
+  background:black;
+}
+
+#container {
+  position: relative;
+  margin: 0 auto;
+  height: 300px;
+  width: 300px;
+  top: 150px;
+  background: black;
+}
+
+#ship {
+  position: absolute;
+  height: 100px;
+  width: 50px;
+  left: 125px;
+  top: 100px;
+  background-color: #d9d9d9;
+  border-radius: 30%;
+  animation-play-state: paused;
+}
+
+#nose {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -59px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 80px solid #cc0000;
+  border-radius: 15px;
+  animation-play-state: inherit;
+}
+
+#hole {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  left: -20px;
+  top: 85px;
+  background-color: #cce6ff;
+  border-radius: 50%;
+  border: 8px solid #737373;
+}
+
+#alienbody {
+  position: absolute;
+  height: 12px;
+  width: 6px;
+  left: 9px;
+  top: 13px;
+  background-color: #004d1a;
+  border-radius: 30%;
+}
+
+#alienhead {
+  position: absolute;
+  height: 10px;
+  width: 12px;
+  left: -3px;
+  top: -2px;
+  background-color: #004d1a;
+  border-radius: 50%;
+}
+
+#stripe {
+  position: absolute;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 6px;
+  height: -10px;
+  width: 20px;
+  left: -22px;
+  top: 127px;
+  animation-play-state: inherit;
+}
+
+#stripe:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 50%;
+  background: #cc0000;
+  transform: skew(0deg, 6deg);
+  border-radius: 5px;
+  animation-name: lights1;
+  animation-duration: 3s;
+  animation-play-state: inherit;
+  animation-iteration-count: infinite;
+}
+
+#stripe:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50%;
+  width: 50%;
+  background: red;
+  transform: skew(0deg, -6deg);
+  border-radius: 5px;
+  animation-name: lights2;
+  animation-duration: 3s;
+  animation-play-state: inherit;
+  animation-iteration-count: infinite;
+}
+
+#jet {
+  position: absolute;
+  border-bottom: 15px solid #555;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  height: 0;
+  width: 34px;
+  left: -37px;
+  top: 155px;
+  animation-play-state: inherit;
+}
+
+#wing1 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid #cc0000;
+  border-left: 20px solid transparent;
+  left: -28px;
+  top: -69px;
+}
+
+#wing2 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid #cc0000;
+  border-right: 20px solid transparent;
+  left: 42px;
+  top: -69px;
+}
+
+#fire {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 75px solid orange;
+  left: -14px;
+  top: 170px;
+  animation-name: fire;
+  animation-duration: .3s;
+  animation-play-state: inherit;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes fire {
+  0% {
+    border-top: 75px solid orange;
+  }
+
+  10% {
+    border-top: 35px solid orange;
+  }
+
+  20% {
+    border-top: 5px solid orange;
+  }
+
+  30% {
+    border-top: 35px solid orange;
+  }
+
+  40% {
+    border-top: 2px solid orange;
+  }
+
+  50% {
+    border-top: 35px solid orange;
+  }
+
+  60% {
+    border-top: 85px solid orange;
+  }
+
+  70% {
+    border-top: 35px solid orange;
+  }
+
+  80% {
+    border-top: 55px solid orange;
+  }
+
+  90% {
+    border-top: 35px solid orange;
+  }
+
+  100% {
+    border-top: 85px solid orange;
+  }
+}
+
+
+@keyframes lights1 {
+  0% {
+    background: RED;
+  }
+  25% {
+  background: YELLOW;
+  }
+  50% {
+    background: GREEN;
+  }
+  75% {
+    background: blue;
+  }
+  100% {
+    background: RED;
+  }
+}
+@keyframes lights2 {
+  0% {
+    background: TEAL;
+  }
+  25% {
+  background: PURPLE;
+  }
+  50% {
+    background: RED;
+  }
+  75% {
+    background: GREEN;
+  }
+  100% {
+    background: TEAL;
+  }
+}
+#ship:hover {
+  animation-play-state: running;
+}
